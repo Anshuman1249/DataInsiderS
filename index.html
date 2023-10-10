@@ -1,0 +1,51 @@
+<html><head>
+	<title>Submit Product</title>
+ <link rel="me" href="https://www.blogger.com/profile/08721041568417726306">
+ <link rel="stylesheet" href="style.css">
+ </head>
+    <body inmaintabuse="1">
+	    <div class="content">
+            <center>
+            <form method="post" action="" name="product" id="product">
+                <h1>REGISTRATION FORM</h1>
+                <p style="font-size: 15px; margin: 2%;">DataInsiderS</p>
+                <label for="naem"><b>Name</b></label>
+                <input class="fil" type="text" name="name" placeholder="Enter Product Name" required="">
+
+                <label for="naem"><b>College Name</b></label>
+                <input class="fil" type="text" name="collegename" placeholder="Enter Free Or Paid" required="">
+
+                <label for="naem"><b>Study year</b></label>
+                <input class="fil" type="text" name="year" placeholder="Product Downloading Link" required="">
+           
+                <label for="naem"><b>Gender</b></label>
+                <input class="fil" type="text" name="gender" placeholder="Product Downloading Link" required="">
+
+                <label for="naem"><b>Email Address</b></label>
+                <input class="fil" type="text" name="email" placeholder="Enter Your Email" required="">
+
+                <label for="naem"><b>Phone Number</b></label>
+                <input class="fil" type="text" name="number" placeholder="Enter Your Number">
+
+                <label for="naem"><b>WhatsApp No.</b></label>
+                <input class="fil" type="text" name="wnumber" placeholder="WhatsApp No.">
+
+                <button class="click">Submit ➔</button>
+            </form>
+            </center>
+        </div>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwiCDwUWcumZP-Auaka9fOBLeun79QXCXhlvu3jdK9ZQPlTtQiG6aFSnfMjInkRaAQMvw/exec'
+            const form = document.forms['product']
+      
+            form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thank you! your form is submitted successfully." ))
+                .then(() => {  window.location.reload(); })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+    </body>
+      
+</html>
